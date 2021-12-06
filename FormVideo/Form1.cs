@@ -122,7 +122,7 @@ namespace FormVideo
                     //if (frame != null)
                     //{
 
-                    //    image = BitmapConverter.ToBitmap(frame);
+                    //image = BitmapConverter.ToBitmap(frame);
                     //    pictureBox1.Image = image;
 
                     //}
