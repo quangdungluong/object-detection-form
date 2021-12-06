@@ -11,7 +11,9 @@ namespace Yolov5Net.App
     {
         public Bitmap img;
         public Bitmap bitmap;
+        public string[] results;
         YoloScorer<YoloCocoModel> scorer;
+
 
         public YoloImage(Mat image)
         {
@@ -24,6 +26,8 @@ namespace Yolov5Net.App
             List<YoloPrediction> predictions = scorer.Predict(bitmap);
             img = bitmap;
             using Graphics graphics = Graphics.FromImage(img);
+            results = new string[predictions.Count];
+            int i = 0;
             foreach (var prediction in predictions) // iterate each prediction to draw results
             {
                 double score = Math.Round(prediction.Score, 2);
@@ -36,6 +40,8 @@ namespace Yolov5Net.App
                 graphics.DrawString($"{prediction.Label.Name} ({score})",
                     new Font("Consolas", 16, GraphicsUnit.Pixel), new SolidBrush(prediction.Label.Color),
                     new PointF(x, y));
+                results[i] = $"{i+1},{prediction.Label.Name},{score},{prediction.Rectangle.X},{prediction.Rectangle.Y},{prediction.Rectangle.Width},{prediction.Rectangle.Height}";
+                i += 1;
             }
         }
         public static Bitmap MatToBitmap(Mat image)
