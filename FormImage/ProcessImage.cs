@@ -61,6 +61,7 @@ namespace FormImage
         {
             Mat img = new Mat();
             yoloImage = new YoloImage(img);
+            toolStripStatusLabel1.Text = "Done..";
         }
     }
 }

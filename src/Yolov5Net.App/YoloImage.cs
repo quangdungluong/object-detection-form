@@ -14,7 +14,6 @@ namespace Yolov5Net.App
         public string[] results;
         YoloScorer<YoloCocoModel> scorer;
 
-
         public YoloImage(Mat image)
         {
             scorer = new YoloScorer<YoloCocoModel>();
@@ -32,13 +31,13 @@ namespace Yolov5Net.App
             {
                 double score = Math.Round(prediction.Score, 2);
 
-                graphics.DrawRectangles(new Pen(prediction.Label.Color, 1),
+                graphics.DrawRectangles(new Pen(prediction.Label.Color, 2),
                     new[] { prediction.Rectangle });
 
                 var (x, y) = (prediction.Rectangle.X - 3, prediction.Rectangle.Y - 23);
 
                 graphics.DrawString($"{prediction.Label.Name} ({score})",
-                    new Font("Consolas", 16, GraphicsUnit.Pixel), new SolidBrush(prediction.Label.Color),
+                    new Font("Consolas", 32, GraphicsUnit.Pixel), new SolidBrush(prediction.Label.Color),
                     new PointF(x, y));
                 results[i] = $"{i+1},{prediction.Label.Name},{score},{prediction.Rectangle.X},{prediction.Rectangle.Y},{prediction.Rectangle.Width},{prediction.Rectangle.Height}";
                 i += 1;

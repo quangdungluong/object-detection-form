@@ -49,17 +49,19 @@ namespace FormImage
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(10, 9);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(858, 550);
+            this.pictureBox1.Size = new System.Drawing.Size(929, 462);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // Upload
             // 
-            this.Upload.Location = new System.Drawing.Point(901, 75);
+            this.Upload.Location = new System.Drawing.Point(992, 39);
+            this.Upload.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Upload.Name = "Upload";
-            this.Upload.Size = new System.Drawing.Size(155, 50);
+            this.Upload.Size = new System.Drawing.Size(136, 38);
             this.Upload.TabIndex = 1;
             this.Upload.Text = "Upload";
             this.Upload.UseVisualStyleBackColor = true;
@@ -67,9 +69,10 @@ namespace FormImage
             // 
             // Predict
             // 
-            this.Predict.Location = new System.Drawing.Point(901, 168);
+            this.Predict.Location = new System.Drawing.Point(992, 100);
+            this.Predict.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Predict.Name = "Predict";
-            this.Predict.Size = new System.Drawing.Size(155, 59);
+            this.Predict.Size = new System.Drawing.Size(136, 44);
             this.Predict.TabIndex = 2;
             this.Predict.Text = "Predict";
             this.Predict.UseVisualStyleBackColor = true;
@@ -86,11 +89,12 @@ namespace FormImage
             this.y,
             this.w,
             this.h});
-            this.dataGridView1.Location = new System.Drawing.Point(19, 584);
+            this.dataGridView1.Location = new System.Drawing.Point(10, 475);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(929, 193);
+            this.dataGridView1.Size = new System.Drawing.Size(929, 201);
             this.dataGridView1.TabIndex = 3;
             // 
             // ID
@@ -147,30 +151,32 @@ namespace FormImage
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 792);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 694);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1093, 26);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1142, 22);
             this.statusStrip1.TabIndex = 4;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(151, 20);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
             // ProcessImage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScrollMargin = new System.Drawing.Size(10, 0);
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1093, 818);
+            this.ClientSize = new System.Drawing.Size(1142, 716);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Predict);
             this.Controls.Add(this.Upload);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ProcessImage";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.ProcessImage_Load);

@@ -3,7 +3,7 @@ using Yolov5Net.Scorer.Models.Abstract;
 
 namespace Yolov5Net.Scorer.Models
 {
-    public class YoloCocoModel : YoloModel
+    public class YoloVehicleModel : YoloModel
     {
         public override int Width { get; } = 640;
         public override int Height { get; } = 640;
@@ -28,11 +28,19 @@ namespace Yolov5Net.Scorer.Models
 
 
         public override string Weights { get; } = "Assets/Weights/yolov5s.onnx";
+        //public override string[] OutputNames { get; } = new[] { "561" };
         public override string[] OutputNames { get; } = new[] { "output" };
+
+
+        // parametri da cambiare
+
+        // public override string Weights { get; } = "assets/Weights/best.onnx";
+        //public override string[] OutputNames { get; } = new[] { "465" };
+
 
         public override bool UseDetect { get; } = true;
 
-        public YoloCocoModel()
+        public YoloVehicleModel()
         {
 
             Labels = new List<YoloLabel>()
@@ -119,6 +127,6 @@ namespace Yolov5Net.Scorer.Models
                new YoloLabel { Id = 80, Name = "toothbrush" }
                };
 
-            }
+        }
     }
 }
