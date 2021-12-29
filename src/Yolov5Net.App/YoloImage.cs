@@ -12,11 +12,11 @@ namespace Yolov5Net.App
         public Bitmap img;
         public Bitmap bitmap;
         public string[] results;
-        YoloScorer<YoloFoodModel> scorer;
+        YoloScorer<YoloInternModel> scorer;
 
         public YoloImage(Mat image)
         {
-            scorer = new YoloScorer<YoloFoodModel>();
+            scorer = new YoloScorer<YoloInternModel>();
         }
 
         public void Predict(Mat image)
