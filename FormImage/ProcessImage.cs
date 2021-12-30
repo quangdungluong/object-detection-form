@@ -24,10 +24,12 @@ namespace FormImage
             if (fileDialog.ShowDialog() == DialogResult.OK)
             {
                 original = new Bitmap(fileDialog.FileName);
-                image = new Bitmap(original, pictureBox1.Width, pictureBox1.Height);
+                double Scale = Math.Min((double)pictureBox1.Width / original.Width, (double)pictureBox1.Height / original.Height);
+                image = new Bitmap(original, (int) (original.Width * Scale), (int) (original.Height * Scale));
                 pictureBox1.Image = image;
-
+                pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
                 toolStripStatusLabel1.Text = "Upload Successfully..";
+
             }
         }
 
@@ -41,7 +43,8 @@ namespace FormImage
                 var mat= BitmapConverter.ToMat(original);
                 yoloImage.Predict(mat);
                 image = yoloImage.img;
-                image = new Bitmap(image, pictureBox1.Width, pictureBox1.Height);
+                double Scale = Math.Min((double)pictureBox1.Width / image.Width, (double)pictureBox1.Height / image.Height);
+                image = new Bitmap(image, (int)(image.Width * Scale), (int)(image.Height * Scale));
                 pictureBox1.Image = image;
 
                 dataGridView1.Rows.Clear();

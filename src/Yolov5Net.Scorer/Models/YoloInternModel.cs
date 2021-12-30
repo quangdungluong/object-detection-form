@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Yolov5Net.Scorer.Models.Abstract;
+using System.Drawing;
 
 namespace Yolov5Net.Scorer.Models
 {
@@ -27,7 +28,7 @@ namespace Yolov5Net.Scorer.Models
         public override int Dimensions { get; } = 9;
 
 
-        public override string Weights { get; } = "E:/test yolov5 net/yolov5-net-master/src/Yolov5Net.App/Assets/Weights/best.onnx";
+        public override string Weights { get; } = "Assets/Weights/best.onnx";
         public override string[] OutputNames { get; } = new[] { "output" };
 
         public override bool UseDetect { get; } = true;
@@ -37,10 +38,10 @@ namespace Yolov5Net.Scorer.Models
 
             Labels = new List<YoloLabel>()
             {
-                new YoloLabel { Id = 1, Name = "calculator" },
-                new YoloLabel { Id = 2, Name = "Orion_cake" },
-                new YoloLabel { Id = 3, Name = "Karo_cake" },
-                new YoloLabel { Id = 4, Name = "ATM_card" }
+                new YoloLabel { Id = 1, Name = "calculator" , Color=Color.Red},
+                new YoloLabel { Id = 2, Name = "Orion_cake" , Color=Color.Yellow},
+                new YoloLabel { Id = 3, Name = "Karo_cake" , Color=Color.Green},
+                new YoloLabel { Id = 4, Name = "ATM_card" , Color=Color.Bisque}
                };
         }
     }

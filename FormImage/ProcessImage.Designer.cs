@@ -33,6 +33,8 @@ namespace FormImage
             this.Upload = new System.Windows.Forms.Button();
             this.Predict = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Label = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Confidence = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,8 +42,6 @@ namespace FormImage
             this.y = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.w = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.h = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -52,13 +52,13 @@ namespace FormImage
             this.pictureBox1.Location = new System.Drawing.Point(10, 9);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(929, 462);
+            this.pictureBox1.Size = new System.Drawing.Size(872, 526);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // Upload
             // 
-            this.Upload.Location = new System.Drawing.Point(992, 39);
+            this.Upload.Location = new System.Drawing.Point(918, 30);
             this.Upload.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Upload.Name = "Upload";
             this.Upload.Size = new System.Drawing.Size(136, 38);
@@ -69,7 +69,7 @@ namespace FormImage
             // 
             // Predict
             // 
-            this.Predict.Location = new System.Drawing.Point(992, 100);
+            this.Predict.Location = new System.Drawing.Point(918, 94);
             this.Predict.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Predict.Name = "Predict";
             this.Predict.Size = new System.Drawing.Size(136, 44);
@@ -89,20 +89,38 @@ namespace FormImage
             this.y,
             this.w,
             this.h});
-            this.dataGridView1.Location = new System.Drawing.Point(10, 475);
+            this.dataGridView1.Location = new System.Drawing.Point(10, 539);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(929, 201);
+            this.dataGridView1.Size = new System.Drawing.Size(872, 151);
             this.dataGridView1.TabIndex = 3;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 698);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1080, 22);
+            this.statusStrip1.TabIndex = 4;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
             // ID
             // 
             this.ID.HeaderText = "ID";
             this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
-            this.ID.Width = 125;
+            this.ID.Width = 70;
             // 
             // Label
             // 
@@ -146,31 +164,13 @@ namespace FormImage
             this.h.Name = "h";
             this.h.Width = 125;
             // 
-            // statusStrip1
-            // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 694);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1142, 22);
-            this.statusStrip1.TabIndex = 4;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
-            // 
             // ProcessImage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScrollMargin = new System.Drawing.Size(10, 0);
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1142, 716);
+            this.ClientSize = new System.Drawing.Size(1080, 720);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Predict);
@@ -195,6 +195,8 @@ namespace FormImage
         private System.Windows.Forms.Button Upload;
         private System.Windows.Forms.Button Predict;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Label;
         private System.Windows.Forms.DataGridViewTextBoxColumn Confidence;
@@ -202,8 +204,6 @@ namespace FormImage
         private System.Windows.Forms.DataGridViewTextBoxColumn y;
         private System.Windows.Forms.DataGridViewTextBoxColumn w;
         private System.Windows.Forms.DataGridViewTextBoxColumn h;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }
 
